@@ -58,7 +58,7 @@ function Navbar() {
       </button>
       <a
         className="mr-5"
-        href="https://github.com/RasulSonmez/weather-forecast-reactjs"
+        href="https://github.com/alicolak64/wheather-app"
         target="_blank"
         rel="noopener noreferrer"
         title="Repository"
