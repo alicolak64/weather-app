@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,600&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@layer base {
+  html body {
+    @apply antialiased ;
+    font-family: 'Poppins', sans-serif;
+    
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.main{
+  @apply grid h-full	min-h-screen place-items-center p-4  bg-gradient-to-tr dark:bg-gradient-to-tr dark:from-gray-600 dark:to-gray-900 from-sky-100 to-sky-300 
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper{
+  @apply container  lg:grid lg:grid-cols-12 md:grid-cols-1 justify-center bg-white dark:bg-gray-800  rounded-3xl overflow-hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar{
+  @apply  mx-auto rounded-3xl p-8 col-span-3 w-full  bg-white dark:bg-gray-900 border
+}
+
+.container{
+  @apply bg-sky-50 dark:bg-gray-800 col-span-9 p-4
+}
+
+.searchbar{
+  @apply flex items-center overflow-hidden rounded-2xl border border-gray-200
+}
+
+.searchbar-label{
+  @apply flex items-center justify-center w-8 h-8 bg-white
+}
+.searchbar-icon{
+  @apply pr-1 text-gray-500 
+}
+
+.searchbar-input{
+@apply h-8 outline-none bg-white text-gray-700 text-sm px-2 w-full
+}
+
+.weather-body {
+  @apply flex h-full flex-col justify-center items-center;
+}
+.weather-inner{
+  @apply flex h-24 w-44 justify-center items-center mb-3 shadow-xl rounded-full p-6 border border-gray-100
 }
