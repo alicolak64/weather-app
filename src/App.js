@@ -1,17 +1,13 @@
-
-
 import './App.css';
+
+import Main from "./components/Main";
+import { MainProvider } from "./context/MainContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h5>
-          Wheather App
-        </h5>
-        
-      </header>
-    </div>
+    <MainProvider>
+      <Main />
+    </MainProvider>
   );
 }
 
